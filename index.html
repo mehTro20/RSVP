@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+      <header>
+          <h1>The Last Supper</h1>
+          <p>You're invited to the last supper.</p>
+      </header>
+    <form class="fullCard">
+        <label id="name-label">
+            <p>Name</p>
+            <input type="text" placeholder="First name?" id="name" required></input>
+        </label>
+        <label id="surname-label">
+            <p>Surname</p>
+            <input type="text" placeholder="Last name?" id="surname" required></input>
+        </label>
+        <label id="DOB-label">
+            <p>Date of Birth</p>
+            <input type="date" placeholder="yyyy-mm-dd" id="DOB" required></input>
+        </label>
+        <label id="email-label">
+            <p>Email Address</p>
+            <input type="email" placeholder="Email?" id="email" required>
+            </input>
+        </label>
+        <label>
+            <p>Contact Numbers</p>
+            <input type="tel" placeholder="Phone numbers?" id="phone-numbers" required></input>
+        </label>
+        <p>Choose your Host</p>
+        <label id="dropdown-label">
+            <select name="president" id="dropdown">
+                <option value="Jesus">Jesus</option>
+                <option value="Shembe">Shembe</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Zeus">Zeus</option>
+                <option value="Mohammed">Mohammed</option>
+            </select>
+        </label>
+        <label id="food-label">
+            <p>Please indicate the following:</p>
+            <p>Are you vegan?</p>
+            <div class="uu">
+            <label for="Yes">Yes</label>
+                <input type="radio" id="yes" name="yes-no" value="Yes">
+            </div>    
+            <div class="uu">
+            <label for="Yes">No</label><input type="radio" id="no" name="yes-no" value="No">
+        </div>
+            </label>
+        <label>
+            <p>Please select your preferred food combination</p>
+            <div class="uu"><label>Traditional<input type="checkbox" id="traditional" name="food" value="Traditional"></label></div>
+            <div class="uu"><label>English<input type="checkbox" id="english" name="food" value="English"></label></div>
+            <div class="uu"><label>Indian<input type="checkbox" id="indian" name="food" value="Indian"></label></div>
+            <div class="uu"><label>Chinese<input type="checkbox" id="chinese" name="food" value="Chinese"></label></div>
+        </label>
+  </form>
+</div>
+</body>
+</html>

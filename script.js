@@ -1,16 +1,16 @@
 
-const show = () => {
+const displayOptions = () => {
     let disp = document.getElementById("foo");
     
     return (disp.style.display === "none") ?  disp.style.display = "block"
     : disp.style.display = "block";
 };
 
-const hide = () => {
-    let fihla = document.getElementById("foo");
+const hideOptions = () => {
+    let hide = document.getElementById("foo");
     
-    return (fihla.style.display === "none") ?  fihla.style.display = "none"
-    : fihla.style.display = "none";
+    return (hide.style.display === "none") ?  hide.style.display = "none"
+    : hide.style.display = "none";
 };
 
 let form = "";
@@ -22,6 +22,8 @@ let contacts = "";
 let host = "";
 let vegan = "";
 let fcombo = "";
+var checkedValues =[];
+
 const mySubmit = (event) => {
     
     event.preventDefault();
@@ -33,7 +35,7 @@ const mySubmit = (event) => {
     dob = document.getElementById("DOB").value;
     contacts = document.getElementById("phone-numbers").value;
     host = document.getElementById("dropdown").value;
-    vegan = rVls();
+    vegan = radioValues();
     fcombo = test(event);
     if (fname === "" || lname === "" || email === ""|| dob === ""|| contacts === "") {
           return alert('Fill up maan!')
@@ -49,29 +51,29 @@ const myDisplay = () => {
     if (document.getElementById("yes").checked){
     document.getElementById("list").innerHTML = `<ul>
     
-    <li>Libitso:${fname}</li>
-    <li>Sifani:${lname}</li>
-    <li>Gmail:${email}</li>
-    <li>Birthday:${dob}</li>
-    <li>Numbers:${contacts}</li>
-    <li>Host:${host}</li>
-    <li>Vegan?:${vegan}</li> 
-    <li>Food:${fcombo}</li>
+    <li>Name: ${fname}</li>
+    <li>Surname: ${lname}</li>
+    <li>Email: ${email}</li>
+    <li>Birthday: ${dob}</li>
+    <li>Numbers: ${contacts}</li>
+    <li>Host: ${host}</li>
+    <li>Vegan?: ${vegan}</li> 
+    <li>Food: ${fcombo}</li>
     </ul>`;   
     } else {
         document.getElementById("list").innerHTML = `<ul>
     
-    <li>Libitso:${fname}</li>
-    <li>Sifani:${lname}</li>
-    <li>Gmail:${email}</li>
-    <li>Birthday:${dob}</li>
-    <li>Numbers:${contacts}</li>
+    <li>Name: ${fname}</li>
+    <li>Surname: ${lname}</li>
+    <li>Email: ${email}</li>
+    <li>Birthday: ${dob}</li>
+    <li>Numbers: ${contacts}</li>
     <p>${fname} will not be attending</p>
     </ul>`
 }
 }; 
 
-const rVls = () => {
+const radioValues = () => {
     let rv = "";
     
     return (document.getElementById("jradio1").checked) ? rv = document.getElementById("jradio1").value
@@ -79,16 +81,15 @@ const rVls = () => {
      : rv = "Not selected";
 }
 
-const cVls = () => {
-    let cv = "";
+// const checkboxValues = () => {
+//     let cv = "";
 
-    return (document.getElementById("traditional").checked) ? cv = document.getElementById("traditional").value
-        : (document.getElementById("english").checked) ? cv = document.getElementById("english").value
-        : cv
-};
+//     return (document.getElementById("traditional").checked) ? cv = document.getElementById("traditional").value
+//         : (document.getElementById("english").checked) ? cv = document.getElementById("english").value
+//         : cv
+// };
 
 const test = (event) => {
-    var checkedValues =[];
     var value = event.target.value
     var index = checkedValues.indexOf(value)  //indexOf means accessing the value
     if(event.target.checked == false && index > -1){  

@@ -49,7 +49,7 @@ const myDisplay = () => {
     
 
     if (document.getElementById("yes").checked){
-    document.getElementById("list").innerHTML = `<ul>
+    document.getElementById("list").innerHTML += `<ul>
     
     <li>Name: ${fname}</li>
     <li>Surname: ${lname}</li>
@@ -61,7 +61,7 @@ const myDisplay = () => {
     <li>Food: ${fcombo}</li>
     </ul>`;   
     } else {
-        document.getElementById("list").innerHTML = `<ul>
+        document.getElementById("list").innerHTML += `<ul>
     
     <li>Name: ${fname}</li>
     <li>Surname: ${lname}</li>

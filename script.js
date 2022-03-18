@@ -22,7 +22,7 @@ let contacts = "";
 let host = "";
 let vegan = "";
 let fcombo = "";
-var checkedValues =[];
+var checkedValues = [];
 
 const mySubmit = (event) => {
     

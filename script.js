@@ -75,10 +75,12 @@ const myDisplay = () => {
 
 const radioValues = () => {
     let rv = "";
+    var results = (document.getElementById("jradio1").checked) ? rv = document.getElementById("jradio1").value
+    : (document.getElementById("jradio2").checked) ? rv = document.getElementById("jradio2").value
+    : rv = "Not selected";
+
     
-    return (document.getElementById("jradio1").checked) ? rv = document.getElementById("jradio1").value
-     : (document.getElementById("jradio2").checked) ? rv = document.getElementById("jradio2").value
-     : rv = "Not selected";
+    return results
 }
 
 // const checkboxValues = () => {
